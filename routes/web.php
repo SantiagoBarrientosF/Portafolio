@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DownloadController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('profile');
 });
 
 Route::get('/about_me', function() {
