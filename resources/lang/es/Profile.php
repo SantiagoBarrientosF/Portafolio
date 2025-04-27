@@ -25,4 +25,9 @@ return [
     'rol' => 'Desarrollador Backend',
     'phrase' => 'Si puedes imaginarlo, puedes hacerlo.',
     'me' => '¡Hola! Soy Santiago Barrientos ..',
+    'close' => 'Cerrar',
+    'technology_text' => 'Servicio Nacional de Aprendizaje (SENA) - 2023-2024.',
+    'technology' => 'Tecnología en Análisis y Desarrollo de Software',
+    'technician_text' => 'Servicio Nacional de Aprendizaje (SENA) - 2021-2022.',
+    'technician' => 'Técnico en Desarrollo de Software',
 ];

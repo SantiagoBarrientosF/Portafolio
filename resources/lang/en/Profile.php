@@ -5,10 +5,6 @@ return [
     'about_me_text' => " I'm a web developer passionate about technology. I love learning and facing challenges, always looking to improve my skills and grow professionally. I have experience in backend development, working with various technologies and frameworks. I am excited to take on new projects and contribute to the success of my team.",
     'technologies' => 'Technologies',
     'education' => 'Education',
-    'education_text' => 'Software Development Technician - 
-    Servicio Nacional de Aprendizaje (SENA) - 2021-2022.
-    Software Analysis and Development Technology - 
-    Servicio Nacional de Aprendizaje (SENA) - 2023-2024.',
     'projects' => 'Projects',
     'contact' => 'Contact',
     'contact_text' => 'Interested in working with me? Email me at:',
@@ -27,6 +23,11 @@ return [
     'rol' => 'Backend Developer',
     'phrase' => 'If you can imagine it, you can do it.',
     'me' => "Hi! I'm Santiago Barrientos ..",
+    'close' => 'Close',
+    'technology_text' => 'Servicio Nacional de Aprendizaje (SENA) - 2023-2024.',
+    'technology' => ' Software Analysis and Development Technology',
+    'technician_text' => 'Servicio Nacional de Aprendizaje (SENA) - 2021-2022.',
+    'technician' => ' Software Development Technician',
 ];
 
 ?>

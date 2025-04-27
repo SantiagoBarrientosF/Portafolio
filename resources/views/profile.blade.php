@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio - Santiago B.F</title>
+  <title></title>
   @vite('resources/css/app.css')
   <style>
     body {
@@ -13,7 +13,7 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
   <header class="bg-white dark:bg-gray-800 shadow-md p-6 flex justify-between items-center">
-    <button id="dark-mode-toggle" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">Modo Oscuro</button>
+    <button id="dark-mode-toggle" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">{{__('Profile.dark_mode')}}</button>
     <div class="relative inline-block text-left">
       <button id="dropdownButton" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">
         {{__('Profile.language') }}
@@ -35,7 +35,7 @@
       </div>
       <div class="flex flex-col items-left mb-4">
         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:scale-105">
-          <a href="{{route('download_cv')}}">Download cv</a>
+          <a href="{{route('download_cv')}}">{{__('Profile.download_cv')}}</a>
         </button>
       </div>
       <h1 class="text-lg font-bold mb-2">{{__('Profile.rol')}}</h1>
@@ -43,31 +43,34 @@
       <p class="text-lg text-gray-500 dark:text-gray-400">{{__('Profile.phrase')}}</p>
     </div> 
     <!-- Profile sections -->
-    <section class="flex-1 min-w-[280px] max-w-md bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6">
+    <section class="flex-1 min-w-[280px] max-w-md h-64 bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 hover:scale-110">
       <h2 class="text-2xl font-semibold mb-4 text-center">{{__('Profile.about_me')}}</h2>
       <p class="text-base leading-relaxed">
         {{__('Profile.about_me_text')}}
       </p>
     </section>
-    <section class="flex-1 min-w-[280px] max-w-md bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6">
+    <section class="flex-1 min-w-[280px] max-w-md h-64 bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 hover:scale-110">
       <h2 class="text-2xl font-semibold mb-4 text-center">{{__('Profile.technologies')}}</h2>
       <div class="flex flex-wrap justify-center gap-4">
-        <img src="/img/Github.svg" class="w-10 h-10" />
-        <img src="/img/tailwindcss.svg" class="w-10 h-10" />
-        <img src="/img/django.svg" class="w-10 h-10" />
-        <img src="/img/laravel.svg" class="w-10 h-10" />
-        <img src="/img/postgresql.svg" class="w-10 h-10" />
-        <img src="/img/postman.svg" class="w-10 h-10" />
-        <img src="/img/mongodb.svg" class="w-10 h-10" />
-        <img src="/img/javascript.svg" class="w-10 h-10"/>
-        <img src="/img/flask.svg" class="w-10 h-10"/>
+        <img src="/img/Github.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/tailwindcss.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/django.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/laravel.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/postgresql.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/postman.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/mongodb.svg" class="w-10 h-10 hover:scale-120" />
+        <img src="/img/javascript.svg" class="w-10 h-10 hover:scale-120"/>
+        <img src="/img/flask.svg" class="w-10 h-10 hover:scale-120"/>
       </div>
     </section>
-    <section class="flex-1 min-w-[280px] max-w-md bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6">
+    <section class="flex-1 min-w-[280px] max-w-md h-64 bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-lg p-6 hover:scale-110">
       <h2 class="text-2xl font-semibold mb-4 text-center">{{__('Profile.education')}}</h2>
-      <p class="leading-relaxed">
-        {{__('Profile.education_text')}}
-      </p>
+      <ul class="list-none list-inside">
+        <li class="mb-2"><strong>{{__('Profile.technology')}}</strong></li>
+        <li class="mb-2">{{__('Profile.technology_text')}}</li>
+        <li class="mb-2"><strong>{{__('Profile.technician')}}</strong></li>
+        <li class="mb-2">{{__('Profile.technician_text')}}</li>
+      </ul>
     </section>
   </main>
   <section class="p-6 bg-white dark:bg-gray-800 text-black dark:text-white">
@@ -76,7 +79,7 @@
       <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4">
         <h3 class="text-xl font-bold mb-2">{{__('Profile.la_union_api')}}</h3>
         <p class="mb-4">{{__('Profile.la_union_text')}}</p>
-        <a href="#" class="text-blue-600 hover:underline onclick="toggleModal('modal_la_union','open')">{{__('Profile.view_more')}}</a>
+        <a href="#" class="text-blue-600 hover:underline" onclick="toggleModal('modal_la_union','open')">{{__('Profile.view_more')}}</a>
       </div>
       <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4">
         <h3 class="text-xl font-bold mb-2">{{__('Profile.hands_detection')}}</h3>
@@ -86,7 +89,7 @@
       <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4">
         <h3 class="text-xl font-bold mb-2">{{__('Profile.file_processor_system')}}</h3>
         <p class="mb-4">{{__('Profile.file_processor_text')}}</p>
-        <a href="#" class="text-blue-600 hover:underline" onclick="toggleModal('modal_la_union','open')">{{__('Profile.view_more')}}</a>
+        <a href="#" class="text-blue-600 hover:underline" onclick="toggleModal('modal_processor','open')">{{__('Profile.view_more')}}</a>
       </div>
     </div>
   </section>
@@ -125,6 +128,7 @@
 
     toggle.addEventListener("click", () => {
       htmlRoot.classList.toggle("dark");
+      console.log("Modo oscuro activado:", htmlRoot.classList.contains("dark"));
     });
 
     const btn = document.getElementById('dropdownButton');
