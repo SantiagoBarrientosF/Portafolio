@@ -7,9 +7,6 @@ Route::get('/', function () {
     return view('profile');
 });
 
-Route::get('/about_me', function() {
-    return view('profile'); 
-});
 
 Route::get('/lang/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'es'])) {
