@@ -22,8 +22,8 @@
         </svg>
       </button>
       <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-40 bg-white dark:bg-gray-700 border rounded-lg shadow-lg">
-        <a href="{{ route('lang.switch', 'es') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Español</a>
-        <a href="{{ route('lang.switch', 'en') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">English</a>
+        <a href="{{ route('lang.switch',['locale' => 'es']) }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Español</a>
+        <a href="{{ route('lang.switch',['locale' => 'es']) }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">English</a>
       </div>
     </div>
   </header>
@@ -113,10 +113,13 @@
     </div>
   </div>  
   <div id="modal_processor" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-md w-full">
-      <h2 class="text-xl font-semibold mb-4">{{__('Profile.file_processor_system')}}</h2>
-      <p class="mb-4">{{__('Profile.file_processor_text')}}</p>
-      <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="toggleModal('modal_processor','close')">{{__('Profile.close')}}</button>
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-md w-full flex flex-col items-center">
+      <div class="flex items-center justify-center mb-4">
+        <img src="/img/Procesador.png" alt="File Processor System" class="rounded-full w-32 h-32 mb-4 shadow-lg" />
+      </div>
+        <h2 class="text-xl font-semibold mb-4">{{__('Profile.file_processor_system')}}</h2>
+        <p class="mb-4">{{__('Profile.file_processor_text')}}</p>
+        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" onclick="toggleModal('modal_processor','close')">{{__('Profile.close')}}</button>
     </div>
   </div>    
   <footer class="bg-gray-200 dark:bg-gray-900 text-center text-sm p-4 text-gray-800 dark:text-gray-300">
@@ -130,7 +133,8 @@
       htmlRoot.classList.toggle("dark");
       console.log("Modo oscuro activado:", htmlRoot.classList.contains("dark"));
     });
-
+  </script>
+  <script>
     const btn = document.getElementById('dropdownButton');
     const menu = document.getElementById('dropdownMenu');
 
@@ -152,6 +156,7 @@
         modal.classList.add('hidden');
       }
     }
-  </script>
+  </script>  
+
 </body>
 </html>

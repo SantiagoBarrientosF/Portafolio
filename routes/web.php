@@ -14,6 +14,7 @@ Route::get('/lang/{locale}', function ($locale) {
     }
     session(['locale' => $locale]);
     return redirect()->back();
+    
 })->name('lang.switch');
 
 Route::get('/download_cv', [DownloadController::class, 'download_cv'])->name('download_cv');

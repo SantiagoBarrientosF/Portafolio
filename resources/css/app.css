@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @source "../views";
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @tailwind base;
 @tailwind components;

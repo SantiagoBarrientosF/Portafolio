@@ -15,9 +15,8 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = session('locale', config('app.locale'));
+        $locale = route('locale', config('app.locale'));
         app()->setLocale($locale);
-        dd('Middleware ejecutado, idioma: ' . $locale);
         return $next($request);
     }
 }
